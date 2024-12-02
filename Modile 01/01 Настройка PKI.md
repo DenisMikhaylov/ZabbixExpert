@@ -95,7 +95,7 @@ www# openssl req -new -key www.key -out www.req   #-sha256
 ```
 ```
 ...
-Common Name (eg, YOUR name) []:<Имя компьютера>
+Common Name (eg, YOUR name) []:zabbix.corp1.ru
 ...
 ```
 ```
