@@ -7,7 +7,7 @@
 
 Настройка атрибутов базы CA в конфигурации ssl
 ```
-lan# nano /etc/ssl/openssl.cnf
+# nano /etc/ssl/openssl.cnf
 ```
 ```
 ...
@@ -36,7 +36,7 @@ mkdir /var/CA
 ```
 Создание зашифрованного приватного ключа
 ```
-lan# openssl genrsa -des3 -out CA/ca.key 2048
+# openssl genrsa -des3 -out CA/ca.key 2048
 
 Generating RSA key, 2048 bits
 Enter PEM pass phrase:Pa$$w0rd
@@ -73,7 +73,7 @@ Common Name (eg, YOUR name) []:corpX.un
 Инициализация списка отозванных сертификатов
 
 ```
-lan# openssl ca -gencrl -out /var/CA/ca.crl
+# openssl ca -gencrl -out /var/CA/ca.crl
 ```
 ```
 Enter pass phrase for ./CA/ca.key:Pa$$w0rd
@@ -83,15 +83,13 @@ Enter pass phrase for ./CA/ca.key:Pa$$w0rd
 
 Создание приватного ключа сервиса
 ```
-www# openssl genrsa -out www.key 2048
-www# chmod 400 www.key
+# openssl genrsa -out www.key 2048
+# chmod 400 www.key
 ```
 Создание запроса на сертификат
+
 ```
-# scp /etc/ssl/openssl.cnf www:/etc/ssl/
-```
-```
-www# openssl req -new -key www.key -out www.req   #-sha256
+# openssl req -new -key www.key -out www.req   #-sha256
 ```
 ```
 ...
