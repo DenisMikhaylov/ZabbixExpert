@@ -35,7 +35,7 @@ print(JSON)
 ```
 Проверка запуска
 ```
-python3 /home/zabbix/service_discovery.py
+python3 service_discovery.py
 ```
 
 Настройка Zabbix Agent
@@ -43,7 +43,7 @@ python3 /home/zabbix/service_discovery.py
 nano /etc/zabbix/zabbix_agentd.d/linuxservice.conf
 ```
 ```
-UserParameter=service.discovery,python3 /home/zabbix/service_discovery.py
+UserParameter=service.discovery,python3 /etc/zabbix/service_discovery.py
 UserParameter=service.isactive[*],systemctl is-active --quiet '$1' && echo 1 || echo 0
 UserParameter=service.activatedtime[*],systemctl show '$1' --property=ActiveEnterTimestampMonotonic | cut -d= -f2
 
