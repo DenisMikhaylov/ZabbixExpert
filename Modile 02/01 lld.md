@@ -1,4 +1,5 @@
-Переключаемся на gate
+Переключаемся на Debian-1 или Debian2
+Устанавливаем агент, если его нет.
 ```
 # nano /etc/zabbix/zabbix_agentd.d/my.linux.disk.discovery.conf
 ```
@@ -8,7 +9,7 @@ UserParameter=my.disks.discovery,/bin/lsblk -dJ | /bin/sed -e 's/blockdevices/da
 Проверяем раюоту нового параметра , переключаемся на zabbix
 
 ```
-# zabbix_get -s 192.168.10.1 -k my.disks.discovery | jq
+# zabbix_get -s <ip debian> -k my.disks.discovery | jq
 ```
 Создаем шаблон 
 
@@ -42,7 +43,7 @@ Templates->Create template
 
 Создание Статистика DHCP сервера
 
-Переходим на Gate 
+Переключаемся на Debian-1 или Debian2
 
 Устанавливаем приложение
 ```
