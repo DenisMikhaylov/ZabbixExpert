@@ -1,5 +1,8 @@
 НАстройка мониторинга сервисов в Linux
 
+создайте шаблон Service
+
+
 Создание скрипта 
 ```
 nano service_discovery.py
@@ -67,16 +70,16 @@ Templates->Create template
   Discovery rules->
     Name: Service Discovery
     Key: service.discovery
-    Type:	Zabbix Agent (active)
+    Type:	Zabbix Agent 
     Item prototypes->
       Name: Service Active : {#SERVICE}
       Key: service.isactive["{#SERVICE}"]
-      type: Zabbix Agent (active)
+      type: Zabbix Agent 
       Type of information: Numeric (unsigned)
 
       Name: Service Activated Time : {#SERVICE}
       Key: service.activatedtime["{#SERVICE}"]
-      Type:	Zabbix Agent (active)
+      Type:	Zabbix Agent
       Type of information: Numeric (unsigned)
 
       Trigger prototypes->
