@@ -34,7 +34,7 @@ nano /etc/zabbix/zabbix_server.conf
 ```
 ```
 HANodeName=zabbix-node1
-NodeAddress=192.168.10.41
+NodeAddress=192.168.1.41
 ```
 Перезапускаем сервер
 
@@ -59,7 +59,7 @@ nano /etc/zabbix/zabbix_server.conf
 ```
 HANodeName=zabbix-node2
 NodeAddress=<ip address Debian-3>
-DBHost=192.168.10.41
+DBHost=192.168.1.41
 DPPassword=password
 ```
 Перезапускаем сервер
