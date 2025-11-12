@@ -62,3 +62,8 @@ NodeAddress=<ip address Debian-3>
 DBHost=192.168.10.41
 DPPassword=password
 ```
+Перезапускаем сервер
+
+```
+systemctl restart zabbix-server
+```
