@@ -55,7 +55,7 @@ stateOrProvinceName_default   = Moscow region
 localityName_default          = Moscow
 0.organizationName_default    = cko
 organizationalUnitName_default = noc
-emailAddress_default          = noc@corp.ru
+emailAddress_default          = noc@corp.local
 
 [ req_attributes ]
 ...
@@ -67,7 +67,7 @@ emailAddress_default          = noc@corp.ru
 ```
 Enter pass phrase for ca.key:Pa$$w0rd
 ...
-Common Name (eg, YOUR name) []:corpX.un
+Common Name (eg, YOUR name) []:corp.local
 ```
 
 Инициализация списка отозванных сертификатов
@@ -93,7 +93,7 @@ Enter pass phrase for ./CA/ca.key:Pa$$w0rd
 ```
 ```
 ...
-Common Name (eg, YOUR name) []:zabbix.corp1.ru
+Common Name (eg, YOUR name) []:zabbix.corp.local
 ...
 ```
 ```
